@@ -40,17 +40,31 @@
 
 <body class="ng-cloak">
   <header ng-include="'/modules/core/client/views/header.client.view.html'" class="navbar navbar-fixed-top navbar-inverse"></header>
-  <section class="content">
-    <section class="container">
-      {{{block "content"}}}
-    </section>
+
+<section class="content">
+      <section class="container">
+          {{{block "content"}}}
+</section>
+
+   <!-- <div ng-include="'/modules/core/client/views/footer.client.view.html'"></div> -->
+
+
+
   </section>
+
+
+
+
+
+
+
 
   <noscript>
     <style>
       [ng\:cloak], [ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
         display: block !important;
       }
+
     </style>
     <div class="alert alert-warning">
       <strong>This page requires JavaScript.</strong> Please enable it in your browser.
@@ -68,7 +82,7 @@
 
   <!--Application JavaScript Files-->
     {{#each jsFiles}}<script type="text/javascript" src="/{{this}}"></script>{{/each}}
-  
+
   <!--owasp config sync-->
   <script type="text/javascript">
     var sharedConfig = {{{ sharedConfig }}};
@@ -79,6 +93,9 @@
   <!--Livereload script rendered -->
   <script type="text/javascript" src="{{host}}:35729/livereload.js"></script>
   {{/if}}
+
+
+
 </body>
 
 </html>
